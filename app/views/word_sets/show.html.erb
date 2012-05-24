@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ch:</b>
+  <%= @word_set.ch %>
+</p>
+
+<p>
+  <b>Pin:</b>
+  <%= @word_set.pin %>
+</p>
+
+<p>
+  <b>Jp:</b>
+  <%= @word_set.jp %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_set_path(@word_set) %> |
+<%= link_to 'Back', word_sets_path %>

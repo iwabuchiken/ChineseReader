@@ -1,0 +1,13 @@
+g p origin master
+
+[heroku]
+*gem install heroku --no-ri --no-rdoc
+*heroku keys:add
+*heroku create --stack cedar
+*g p heroku master
+*heroku rename cosmos-chinese-reader
+*heroku open
+
+
+
+============EOF============
