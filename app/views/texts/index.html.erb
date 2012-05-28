@@ -17,7 +17,8 @@
   	<td><%= text.id %></td>
   	<td><%= text.title %></td>
     <td><%= text.text[0..10] %></td>
-    <td><%= text.url %></td>
+<!--     <td><%= text.url %></td> -->
+	<td><%= link_to text.url, text.url, {:target => "_blank"} %></td>
     <td><%= text.genre %></td>
     <td><%= link_to 'Show', text %></td>
     <td><%= link_to 'Edit', edit_text_path(text) %></td>

@@ -27,4 +27,6 @@ bundle exec rake db:migrate
 
 rails generate migration add_text_id_to_word_sets text_id:integer
 
+rails generate controller GetWords main show
+
 ============EOF============

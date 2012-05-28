@@ -7,7 +7,10 @@
 
 <p>
   <b>Url:</b>
-  <%= @text.url %>
+<!--   <%= @text.url %> -->
+	<%#= link_to @text.url, "http://www.newenergy.org.cn/html/0119/9271142760.html" %>
+	<%= link_to @text.url, @text.url, {:target => "_blank"} %>
+
 </p>
 
 <p>
