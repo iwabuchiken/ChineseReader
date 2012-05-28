@@ -80,4 +80,9 @@ class WordSetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_words
+    
+  end
+
 end

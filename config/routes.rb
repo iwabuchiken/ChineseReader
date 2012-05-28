@@ -1,4 +1,8 @@
 ChineseReader::Application.routes.draw do
+  get "get_words/main"
+
+  get "get_words/show"
+
   resources :texts
 
   resources :word_sets

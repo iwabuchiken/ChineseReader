@@ -1,17 +1,4 @@
-<h1>Listing word_sets</h1>
-
-<table>
-  <tr>
-    <th>Text id</th>
-    <th>Ch</th>
-    <th>Pin</th>
-    <th>Jp</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @word_sets.each do |word_set| %>
+<h1>Get words</h1>
   <tr>
     <td><%= word_set.text_id %></td>
     <td><%= word_set.ch %></td>
@@ -21,10 +8,6 @@
     <td><%= link_to 'Edit', edit_word_set_path(word_set) %></td>
     <td><%= link_to 'Destroy', word_set, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
-<% end %>
-</table>
-
-<%= link_to 'Get words', :controller => 'word_sets', :action => "get_words" %>
 
 <br />
 
