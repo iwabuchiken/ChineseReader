@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524003008) do
+ActiveRecord::Schema.define(:version => 20120528045113) do
 
   create_table "texts", :force => true do |t|
-    t.string   "body"
+    t.string   "text"
     t.string   "url"
     t.string   "genre"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "title"
   end
 
   create_table "word_sets", :force => true do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120524003008) do
     t.string   "jp"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "text_id"
   end
 
 end

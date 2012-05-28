@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to 'Word sets', :controller => "word_sets", :action => "index" %>
+<%= link_to 'Texts', :controller => "texts", :action => "index" %>
+
+<hr/>
 
 <%= yield %>
 

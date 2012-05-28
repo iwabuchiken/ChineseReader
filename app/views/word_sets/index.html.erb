@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Text id</th>
     <th>Ch</th>
     <th>Pin</th>
     <th>Jp</th>
@@ -12,6 +13,7 @@
 
 <% @word_sets.each do |word_set| %>
   <tr>
+    <td><%= word_set.text_id %></td>
     <td><%= word_set.ch %></td>
     <td><%= word_set.pin %></td>
     <td><%= word_set.jp %></td>

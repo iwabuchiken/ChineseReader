@@ -2,7 +2,9 @@
 
 <table>
   <tr>
-    <th>Body</th>
+  	<th>Id</th>
+  	<th>Title</th>
+    <th>Text</th>
     <th>Url</th>
     <th>Genre</th>
     <th></th>
@@ -12,7 +14,9 @@
 
 <% @texts.each do |text| %>
   <tr>
-    <td><%= text.body %></td>
+  	<td><%= text.id %></td>
+  	<td><%= text.title %></td>
+    <td><%= text.text[0..10] %></td>
     <td><%= text.url %></td>
     <td><%= text.genre %></td>
     <td><%= link_to 'Show', text %></td>

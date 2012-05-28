@@ -1,3 +1,3 @@
 class Text < ActiveRecord::Base
-  attr_accessible :body, :genre, :url
+  attr_accessible :text, :genre, :url, :title
 end
