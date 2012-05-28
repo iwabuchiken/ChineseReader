@@ -29,4 +29,8 @@ rails generate migration add_text_id_to_word_sets text_id:integer
 
 rails generate controller GetWords main show
 
+rails generate migration change_string_to_text
+
+bundle exec rake db:migrate
+
 ============EOF============
