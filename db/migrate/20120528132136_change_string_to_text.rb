@@ -1,9 +1,9 @@
 class ChangeStringToText < ActiveRecord::Migration
   def up
-    change_column :text, :text, :text
+    change_column :texts, :text, :text
   end
 
   def down
-    change_column :text, :text, :string
+    change_column :texts, :text, :string
   end
 end
