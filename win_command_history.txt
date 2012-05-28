@@ -33,4 +33,19 @@ rails generate migration change_string_to_text
 
 bundle exec rake db:migrate
 
+rails generate migration text_change_text_length
+
+heroku run rake db:migrate
+
+# rails destroy migration 20120528133656
+# rails destroy migration 20120528133656_text_change_text_length
+rails destroy migration text_change_text_length
+
+rails generate migration text_change_text_length
+
+bundle exec rake db:migrate
+
+
+
+
 ============EOF============
