@@ -1,11 +1,10 @@
 <h1>Listing texts</h1>
 
-<table>
+<table id="tbl_texts_index">
   <tr>
   	<th>Id</th>
   	<th>Title</th>
     <th>Text</th>
-    <th>Url</th>
     <th>Genre</th>
     <th></th>
     <th></th>
@@ -15,10 +14,26 @@
 <% @texts.each do |text| %>
   <tr>
   	<td><%= text.id %></td>
-  	<td><%= text.title %></td>
-    <td><%= text.text[0..10] %></td>
+  	
+  	<% if text.title.length == 0 %>
+  		<td><%= link_to "NO TITLE", text.url, {:target => "_blank"} %></td>
+	<% else %>
+		<td><%= link_to text.title, text.url, {:target => "_blank"} %></td>
+	<% end %>
+  	
+  	
+<!--   	<td><%= text.title.class.to_s + "(" + text.title.to_s.length.to_s + ")" %></td> -->
+<!--   	<td><%= link_to text.title, text.url, {:target => "_blank"} %></td> -->
+    
+    <% if text.text.length == 0 %>
+  		<td><%= "NO TEXT" %></td>
+	<% else %>
+		<td><%= text.text[0..10] + "..." %></td>
+	<% end %>
+    <!-- <td><%= text.text[0..10] + "..." %></td> -->
+    
 <!--     <td><%= text.url %></td> -->
-	<td><%= link_to text.url, text.url, {:target => "_blank"} %></td>
+<!-- 	<td><%= link_to text.url, text.url, {:target => "_blank"} %></td> -->
     <td><%= text.genre %></td>
     <td><%= link_to 'Show', text %></td>
     <td><%= link_to 'Edit', edit_text_path(text) %></td>

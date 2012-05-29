@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Body:</b>
+  <b>Title:</b><br/>
+  <%= @text.title %>
+</p>
+
+<p>
+  <b>Text:</b><br/>
   <%= @text.text %>
 </p>
 
 <p>
-  <b>Url:</b>
+  <b>Url:</b><br/>
 <!--   <%= @text.url %> -->
 	<%#= link_to @text.url, "http://www.newenergy.org.cn/html/0119/9271142760.html" %>
 	<%= link_to @text.url, @text.url, {:target => "_blank"} %>
@@ -14,10 +19,19 @@
 </p>
 
 <p>
-  <b>Genre:</b>
+  <b>Genre:</b><br/>
   <%= @text.genre %>
 </p>
 
+<p>
+  <b>Created at:</b><br/>
+  <%= @text.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b><br/>
+  <%= @text.updated_at %>
+</p>
 
 <%= link_to 'Edit', edit_text_path(@text) %> |
 <%= link_to 'Back', texts_path %>
