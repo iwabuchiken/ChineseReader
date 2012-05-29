@@ -1,2 +1,24 @@
 <h1>Dictionary#show</h1>
-<p>Find me in app/views/dictionary/show.html.erb</p>
+
+Japanese : 
+
+<% @word_sets.each do |word_set| %>
+
+	<%= word_set.pin %>
+	<%= word_set.jp %>
+	
+<!-- 	text id -->
+	(Text ID = <%= word_set.text_id %>)
+	
+<!-- 	debug -->
+
+<% end %>
+
+<br/>
+
+Total => <%= @word_sets.length %> candidate(s)
+
+<br/>
+<br/>
+
+<%= link_to 'Back', :controller => "dictionary", :action => "main" %>

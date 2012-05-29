@@ -1,0 +1,4 @@
+<%= form_tag({:controller => 'dictionary', :action => 'show'}, {:method => :get}) do %>
+	<%= text_field_tag :chinese, '', {:size => 10}%>
+	<%= submit_tag 'Get translation' %>
+<% end %>
