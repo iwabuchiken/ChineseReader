@@ -45,7 +45,8 @@ rails generate migration text_change_text_length
 
 bundle exec rake db:migrate
 
-
+[20120529_151904]
+rails generate controller Dictionary main show
 
 
 ============EOF============

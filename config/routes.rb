@@ -1,4 +1,10 @@
 ChineseReader::Application.routes.draw do
+  root :to => "texts#index"
+
+  get "dictionary/main"
+
+  get "dictionary/show"
+
   get "get_words/main"
 
   get "get_words/show"
