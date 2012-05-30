@@ -29,3 +29,24 @@
 <br />
 
 <%= link_to 'New Word set', new_word_set_path %>
+
+<!-- debug -->
+<br/>
+<br/>
+params.length => <%= @params.length %>
+<br/>
+<br/>
+@word_sets.first() => <%= @word_sets.first()%>
+<br/>
+<br/>
+<!-- @word_sets.first().methods.sort.to_s => <%#= @word_sets.first().methods　%> -->
+
+
+
+<br/>
+<br/>
+<%= render 'form_index' %>
+
+<br/>
+<br/>
+params.keys => <%= @params.keys %>

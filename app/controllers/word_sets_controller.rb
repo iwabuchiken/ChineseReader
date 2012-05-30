@@ -2,8 +2,16 @@ class WordSetsController < ApplicationController
   # GET /word_sets
   # GET /word_sets.json
   def index
-    @word_sets = WordSet.all
-
+    # Filtering
+    @params = params
+    
+    if params['text_id'] != nil \
+        and params['text_id'].length != 0
+      @word_sets = WordSet.where('text_id = ?', params['text_id'])
+    else
+      @word_sets = WordSet.all
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @word_sets }

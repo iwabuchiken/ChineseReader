@@ -1,0 +1,8 @@
+<%= form_tag({:controller => 'word_sets', :action => 'index', :text_id => 4},
+ 			{:method => :get}) do %>
+ 			
+<!-- 			# {:method => :get}, :text_id => 4) do %> -->
+<!-- 			# {:method => :get, :text_id => 4}) do %> -->
+	<%= text_field_tag :text_id, '', {:size => 25}%>
+	<%= submit_tag 'Filter' %>
+<% end %>
