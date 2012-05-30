@@ -3,6 +3,8 @@
  			
 <!-- 			# {:method => :get}, :text_id => 4) do %> -->
 <!-- 			# {:method => :get, :text_id => 4}) do %> -->
-	<%= text_field_tag :text_id, '', {:size => 25}%>
+	
+	Filter by text ID number (Example: 3)<br/>
+	<%= text_field_tag :text_id, '', {:size => 15}%>
 	<%= submit_tag 'Filter' %>
 <% end %>
