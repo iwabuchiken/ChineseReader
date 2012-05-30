@@ -1,15 +1,58 @@
-<h1>GetWords#show</h1>
-<p>Find me in app/views/get_words/show.html.erb</p>
+<% if @word_set_special != nil \
+		and  @word_set_special.first() != nil
 
-<br/>
+%>
+	<table>
+		<tr>
+			<td>Text id</td>
+			<td><%= @word_set_special.first().text_id %></td>
+		</tr>
+		<tr>
+			<td>Title</td>
+			<td><%= @word_set_special.first().text.title %></td>
+		</tr>
+	</table>
+	
+	<br/>
+	
+	<table>
+	  <tr>
+	    <th>Ch</th>
+	    <th>Pin</th>
+	    <th>Jp</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+	
+	
+	<% @word_set_special.each do |word_set| %>
+	  <tr>
+	    <td><%= word_set.ch %></td>
+	    <td><%= word_set.pin %></td>
+	    <td><%= word_set.jp %></td>
+	    <td><%= link_to 'Show', word_set %></td>
+	    <td><%= link_to 'Edit', edit_word_set_path(word_set) %></td>
+	    <td><%= link_to 'Destroy', word_set, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
 
-<!-- <%= @data %><br/> -->
-
-<br/>
-
-# @data.class => 
-# <%= @data.class %><br/>
-
-<% @word_set_special.each do |item|%>
-	<%= item.ch %>
+<% else %>
+	<table>
+		<tr>
+			<td>Text id</td>
+			<td><%= @params %></td>
+		</tr>
+		<tr>
+			<td>Title</td>
+			<td><%= @texts %></td>
+		</tr>
+	</table>
+	<br/>
+	No word set found for this text.
 <% end %>
+
+<br/>
+<br/>
+<%= link_to "Back", :controller => "get_words", :action => "main" %>
