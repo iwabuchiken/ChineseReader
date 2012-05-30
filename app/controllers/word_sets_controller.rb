@@ -6,8 +6,10 @@ class WordSetsController < ApplicationController
     @params = params
     
     if params['text_id'] != nil \
-        and params['text_id'].length != 0
-      @word_sets = WordSet.where('text_id = ?', params['text_id'])
+            and params['text_id'].length != 0 \
+            and params['text_id'] != "0"
+        # if params['text_id'] == "0"
+        @word_sets = WordSet.where('text_id = ?', params['text_id'])
     else
       @word_sets = WordSet.all
     end
