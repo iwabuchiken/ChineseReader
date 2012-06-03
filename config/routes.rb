@@ -1,4 +1,8 @@
 ChineseReader::Application.routes.draw do
+  get "test_jqm/main"
+
+  get "test_jqm/show"
+
   root :to => "texts#index"
 
   get "dictionary/main"

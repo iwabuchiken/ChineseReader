@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChineseReader</title>
+	
+	<% if @current_controller.to_s == "test_jqm" %>
+		<title>ChineseReader(with jQuery mobile)</title>
+	<% else %>
+  		<title>ChineseReader</title>
+  	<% end %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  
+  <meta charset="UTF-8" />
+  
+  <% if @current_controller.to_s == "test_jqm" %>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	  <% end %>
+	  
+	  <%= csrf_meta_tags %>
 </head>
 <body>
 <%= link_to 'Word sets', :controller => "word_sets", :action => "index" %>
 <%= link_to 'Texts', :controller => "texts", :action => "index" %>
 <%= link_to 'Get words', :controller => "get_words", :action => "main" %>
 <%= link_to 'Dictionary', :controller => "dictionary", :action => "main" %>
+<%= link_to 'Test JQM', :controller => "test_jqm", :action => "main" %>
 
 <hr/>
 
