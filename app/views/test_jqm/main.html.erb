@@ -4,3 +4,15 @@
 
 <br/>
 <%= @current_controller.to_s %>
+
+<br/>
+<br/>
+
+<hr/>
+<!-- http://stackoverflow.com/questions/3104711/ruby-on-rails-request-envhttp-referer-returns-nil -->
+<ul>
+<% request.env.each do |item| %>
+    <li><%= item[0] %> : <%= item[1] %></li>
+<% end %>
+</ul>
+
