@@ -32,6 +32,9 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
+# 20120604_115213
+gem 'htmlentities'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
