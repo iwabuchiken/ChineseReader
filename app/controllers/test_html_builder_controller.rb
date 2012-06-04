@@ -32,7 +32,15 @@ class TestHtmlBuilderController < ApplicationController
 
     # @modified_text = CGI.unescapeHTML(@modified_text)
     
-    
+    # Get text id from params
+    if params['text_id'] == nil
+      @text_id = "nil"
+    # elif params['text_id'].length > 0
+      # @text_id = params['text_id'].to_i
+    else
+      # @text_id = 0
+      @text_id = params['text_id'].to_i
+    end
     
     @modified_text = @target_text.sub( \
     # @modified_text = @modified_text.sub( \
