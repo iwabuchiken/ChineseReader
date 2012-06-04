@@ -1,4 +1,8 @@
 ChineseReader::Application.routes.draw do
+  get "test_html_builder/main"
+
+  get "test_html_builder/show"
+
   get "test_jqm/main"
 
   get "test_jqm/show"

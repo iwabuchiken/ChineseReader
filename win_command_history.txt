@@ -51,4 +51,6 @@ rails generate controller Dictionary main show
 [20120604_005145]
 rails generate controller TestJQM main show
 
+rails generate controller TestHtmlBuilder main show
+
 ============EOF============
