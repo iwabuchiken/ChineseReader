@@ -9,7 +9,8 @@
 		</tr>
 		<tr>
 			<td>Title</td>
-			<td><a href="<%= @word_set_special.first().text.url %>"><%= @word_set_special.first().text.title %></a></td>
+			<td><a href="<%= @word_set_special.first().text.url %>">
+				<%= @word_set_special.first().text.title %></a></td>
 		</tr>
 	</table>
 	
@@ -17,6 +18,7 @@
 	
 	<table>
 	  <tr>
+	  	<th>Id</th>
 	    <th>Ch</th>
 	    <th>Pin</th>
 	    <th>Jp</th>
@@ -27,9 +29,10 @@
 	
 	<% @word_set_special.each do |word_set| %>
 	  <tr>
-	    <td><%= word_set.ch %></td>
-	    <td><%= word_set.pin %></td>
-	    <td><%= word_set.jp %></td>
+	  	<td class="id"><%= word_set.id %></td>
+	    <td class="words"><%= word_set.ch %></td>
+	    <td class="words"><%= word_set.pin %></td>
+	    <td  class="words"><%= word_set.jp %></td>
 	    <td><%= link_to 'Show', word_set %></td>
 	    
 	  </tr>

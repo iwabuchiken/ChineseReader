@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
 */
+
+th {
+	background-color: LightCyan
+}
+
+h1 {
+	background-color: LightBlue
+}
+
+input[type=text] {
+	background-color: Khaki
+}
+
+input[type=submit] {
+	background-color: Darkorange
+}
+
+/*.class {*/
+.id {
+	text-align: center;
+/*	background-color: Darkorange;*/
+/*	color: Khaki;*/
+	/*min-width: 40vw;*/
+	min-width: 2rem;
+}
+
+.words {
+	min-width: 4rem;
+}
