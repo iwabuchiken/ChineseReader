@@ -24,18 +24,25 @@ class TestHtmlBuilderController < ApplicationController
     
     @word_sets_special = WordSet.where('text_id = ?', @text_id)
     
+    # Initialize @modified_text
+    @modified_text = @target_text
     
-    @modified_text = @target_text.sub( \
-                @word_sets_special.find(4).ch, \
-                # @word_sets_special.first().ch, \
-                "<span id='word_4'>" + @word_sets_special.find(4).ch + \
-                # "<span id='word_4'>" + @word_sets_special.first().ch \
-                  # + "</span>")
-                  "</span>")
     
-    # Words array
-    # @words = {}
-  end
+    # @modified_text = @target_text.sub( \
+    @word_sets_special.each do |word_set|
+      @modified_text = @modified_text.sub( \
+                  # @word_sets_special.find(4).ch, \
+                  # @word_sets_special.first().ch, \
+                  word_set.ch, \
+                  "<span id='word_4'>" + word_set.ch + \
+                    "</span>")
+                  # "<span id='word_4'>" + @word_sets_special.find(4).ch + \
+                  # "<span id='word_4'>" + @word_sets_special.first().ch \
+                    # + "</span>")
+                    # "</span>")
+    end#@word_sets_special.each do
+      
+  end#main
 
   def show
   end
